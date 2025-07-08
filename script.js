@@ -3,6 +3,21 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+const botaoTema = document.getElementById("botao-tema");
+const corpo = document.body;
+
+// Carregar tema salvo
+const temaSalvo = localStorage.getItem("tema");
+if (temaSalvo === "claro") {
+    corpo.classList.add("tema-claro");
+    botaoTema.textContent = "☀️";
+}
+
+botaoTema.addEventListener("click", () => {
+    const estaClaro = corpo.classList.toggle("tema-claro");
+    botaoTema.textContent = estaClaro ? "☀️" : "🌙";
+    localStorage.setItem("tema", estaClaro ? "claro" : "escuro");
+});
 
 const perguntas = [
     {
@@ -69,9 +84,8 @@ const perguntas = [
                 afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
             }
         ]
-    },
+    }
 ];
-
 
 let atual = 0;
 let perguntaAtual;

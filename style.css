@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-fundo: #000000;
     --cor-principal: #000000;
     --cor-secundaria: #1f1f1f;
@@ -7,13 +7,11 @@
 }
 
 body.tema-claro {
-    --cor-fundo: #fefefe;          /* quase branco, suave */
-    --cor-principal: #f5f5f5;      /* cinza muito claro */
-    --cor-secundaria: #dcdcdc;     /* cinza claro */
-    --cor-destaque: #e6b422;       /* amarelo mostarda suave */
-    --cor-texto: #333333;          /* cinza escuro para bom contraste */
-}
-
+    --cor-fundo: #fefefe;
+    --cor-principal: #f5f5f5;
+    --cor-secundaria: #dcdcdc;
+    --cor-destaque: #e6b422;
+    --cor-texto: #333333;
 }
 
 body {
@@ -23,10 +21,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
     transition: background-color 0.5s, color 0.5s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.caixa-principal{
+.caixa-principal {
     background-color: var(--cor-principal);
     width: 90%;
     max-width: 600px;
@@ -36,8 +36,9 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-h1{
+h1 {
     color: var(--cor-destaque);
+    margin-bottom: 20px;
 }
 
 button {
@@ -46,11 +47,15 @@ button {
     border: none;
     border-radius: 15px;
     padding: 15px;
-    transition: background-color 0.3s;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 100%;
     cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
-button:hover{
+button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
 }
@@ -76,3 +81,4 @@ button:hover{
 #botao-tema:hover {
     transform: scale(1.1);
 }
+

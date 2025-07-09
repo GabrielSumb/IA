@@ -3,7 +3,7 @@
     --cor-principal: #000000;
     --cor-secundaria: #1f1f1f;
     --cor-destaque: #32CD32;
-    --cor-texto: #333333;
+    --cor-texto: #D7F9FF;
 }
 
 body.tema-claro {
@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh; /* garante altura total da tela */
     margin: 0;
     transition: background-color 0.5s, color 0.5s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -34,6 +34,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* Centralizar verticalmente dentro do container flex (body já faz isso) */
 }
 
 h1 {
@@ -49,7 +50,6 @@ button {
     padding: 15px;
     margin: 5px 0;
     width: 100%;
-    max-width: 100%;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 1rem;
@@ -81,4 +81,3 @@ button:hover {
 #botao-tema:hover {
     transform: scale(1.1);
 }
-
